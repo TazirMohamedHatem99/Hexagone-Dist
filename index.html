@@ -20,7 +20,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script>
       (() => {
-        document.documentElement.classList.toggle('is-desktop-app', Boolean(globalThis.hexagone));
         try {
           // Only the document language is applied here. The dashboard theme and the
           // brand colour chosen in the settings are scoped to the dashboard shell so
@@ -38,78 +37,10 @@
         } catch {}
       })()
     </script>
-    <style>
-      #desktop-startup {
-        position: fixed;
-        z-index: 2147483647;
-        inset: 0;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background:
-          radial-gradient(ellipse at center, rgba(111, 82, 217, 0.24), transparent 42%),
-          #171629;
-      }
-
-      html.is-desktop-app #desktop-startup {
-        display: flex;
-      }
-
-      #desktop-startup-mark {
-        display: grid;
-        width: 76px;
-        height: 76px;
-        place-items: center;
-        border: 1px solid rgba(191, 245, 217, 0.22);
-        border-radius: 23px;
-        background: linear-gradient(145deg, #8065e3, #5e43c6);
-        box-shadow: 0 16px 56px rgba(111, 82, 217, 0.45);
-        animation: desktop-startup-breathe 1.6s ease-in-out infinite;
-      }
-
-      #desktop-startup-mark svg {
-        width: 54px;
-        height: 54px;
-      }
-
-      #desktop-startup-mark path:first-child {
-        fill: #fff;
-      }
-
-      #desktop-startup-mark path:last-child {
-        fill: none;
-        stroke: #6f52d9;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2.6;
-      }
-
-      @keyframes desktop-startup-breathe {
-        50% {
-          transform: scale(1.06);
-          box-shadow: 0 20px 72px rgba(111, 82, 217, 0.62);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        #desktop-startup-mark {
-          animation: none;
-        }
-      }
-    </style>
-    <script type="module" crossorigin src="/Hexagone-Dist/assets/index-CDPOFGKr.js"></script>
-    <link rel="stylesheet" crossorigin href="/Hexagone-Dist/assets/index-DNyKqi7G.css">
+    <script type="module" crossorigin src="/assets/index-C6vn9f_f.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DjXzuVpC.css">
   </head>
   <body>
-    <div id="desktop-startup" role="status" aria-label="Hexagone is starting">
-      <div id="desktop-startup-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" focusable="false">
-          <path d="M20 2.8 35 11.4v17.2L20 37.2 5 28.6V11.4L20 2.8Z" />
-          <path d="M13.2 14.5v11M26.8 14.5v11M13.2 20h13.6" />
-        </svg>
-      </div>
-    </div>
     <div id="root"></div>
   </body>
 </html>
